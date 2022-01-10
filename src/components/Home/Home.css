@@ -1,0 +1,75 @@
+.home {
+    padding: 4rem;
+    background-color: #fff5cc;
+    min-height: 100vh;
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    margin: 16px !important;
+}
+
+.addLoan__body {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.35rem;
+
+}
+
+.addLoan__div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    width: 100%;
+}
+
+.addLoan__div > label {
+    font-size: 0.925rem;
+    font-weight: 600;
+}
+
+.addLoan__input {
+    width: 100%;
+    height: 36px;
+    border-radius: 7px;
+    outline: none;
+    border: 3px solid #cc6600;
+    background-color: #e6b800;
+    resize: none;
+    padding: 0 0.35rem;
+}
+
+.textarea {
+    height: 70px !important;
+    padding-top: 0.4rem;
+}
+
+.addButton {
+    padding: 0.48rem 0.9rem;
+    font-size: 1.05rem;
+    border-radius: 5px 22px 5px;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 3px solid #cc6600;
+    border-radius: 0px 25px 0px;
+    border-color: #cc6600;
+    white-space: nowrap !important;
+    color: #cc6600;
+    background-image: linear-gradient(45deg, #cc6600 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out; 
+}
+
+.addButton:hover {
+    background-position: 0;
+    color: #e6b800;
+}

@@ -1,0 +1,22 @@
+.singleLoan {
+    margin: 1rem 0;
+}
+
+.sl__title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.sl__no {
+    width: 5%;
+}
+
+.sl__name {
+    width: 75%;
+}
+
+.sl__amount {
+    width: 20%;
+}
