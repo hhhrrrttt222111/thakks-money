@@ -8,6 +8,8 @@ import DialogTitle from '@mui/material/DialogTitle';
 import { AuthContext } from '../../../context/AuthContext'
 import { db } from '../../../firebase/firebase';
 
+import './AddLoan.css'
+
 function AddLoan() {
 
     const [name, setName] = useState('')
@@ -33,6 +35,7 @@ function AddLoan() {
                 amount: amount,
                 description: description,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                returned: false
             })
         }
         setOpen(false);
@@ -44,7 +47,7 @@ function AddLoan() {
 
     return (
         <div className='addLoan'>
-            <button onClick={handleAddLoanOpen}>Add Loan</button>
+            <button className='addLoan_btn' onClick={handleAddLoanOpen}>Add Loan</button>
             <Dialog 
                 open={open} 
                 onClose={handleAddLoanClose}

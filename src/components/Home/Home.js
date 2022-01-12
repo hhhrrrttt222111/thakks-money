@@ -7,14 +7,13 @@ import './Home.css'
 import { db } from '../../firebase/firebase';
 import { AuthContext } from '../../context/AuthContext';
 import SingleLoan from './SingleLoan/SingleLoan';
+import Header from './Header/Header';
 
 function Home() {
 
     const [loans, setLoans] = useState([])
 
     const { currentUser } = useContext(AuthContext)
-
-    console.log(currentUser.uid)
 
     useEffect(() => {
         db.collection('users').doc(currentUser.uid).collection('loans').onSnapshot(snapshot => (
@@ -28,11 +27,10 @@ function Home() {
 
     }, [currentUser.uid]);
 
-    console.log(loans && loans)
 
     return (
         <div className='home'>
-            <h1>Home</h1>
+            <Header />
             <div className='home__container'>
                 <div className='home_header'>
                     <AddLoan />

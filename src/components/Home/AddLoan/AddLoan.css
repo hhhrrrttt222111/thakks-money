@@ -1,3 +1,136 @@
 .addLoan {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
 
+:root {
+    --background: #fff5cc;
+    --button-border-color: #886b1a;
+  }
+
+
+.addLoan_btn {
+  transition: all ease 0.3s;
+  appearance: none;
+  cursor: pointer;
+  border: 2px solid var(--button-border-color);
+  background: var(--background);
+  color: #cc6600;
+  padding: 0.35em 0.85em;
+  border-radius: 0.35em;
+  font-size: 1.025em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: relative;
+  margin: 1rem;
+  font-family: var(--primary-font);
+}
+.addLoan_btn::after {
+  display: block;
+  transition: all ease 0.3s;
+  position: absolute;
+  background: var(--background);
+  content: "+";
+  text-align: center;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  font-size: 1.5em;
+  line-height: 1em;
+  font-weight: 400;
+  top: -0.5em;
+  right: -0.5em;
+  transform: translate(2px, -2px);
+}
+.addLoan_btn:hover, .addLoan_btn:focus {
+  animation-play-state: paused;
+  border-color: #cc6600;
+  color: var(--button-border-color);
+}
+.addLoan_btn:hover::after, .addLoan_btn:focus::after {
+  color: var(--button-border-color);
+}
+.addLoan_btn:active {
+  animation-play-state: paused;
+  background: var(--button-border-color);
+  color: var(--background);
+  border-color: var(--button-border-color);
+}
+.addLoan_btn:active::after {
+  color: var(--button-border-color);
+  background: var(--background);
+}
+
+
+
+.addLoan__body {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.35rem;
+
+}
+
+.addLoan__div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    width: 100%;
+}
+
+.addLoan__div > label {
+    font-size: 0.925rem;
+    font-weight: 600;
+    font-family: var(--primary-font);
+}
+
+.addLoan__input {
+    width: 100%;
+    height: 36px;
+    border-radius: 7px;
+    outline: none;
+    border: 3px solid #cc6600;
+    background-color: #e6b800;
+    resize: none;
+    padding: 0 0.35rem;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+}
+
+.textarea {
+    height: 70px !important;
+    padding-top: 0.4rem;
+}
+
+.addButton {
+    padding: 0.48rem 0.9rem;
+    font-size: 1.05rem;
+    border-radius: 5px 22px 5px;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 3px solid #cc6600;
+    border-radius: 0px 25px 0px;
+    border-color: #cc6600;
+    white-space: nowrap !important;
+    color: #cc6600;
+    background-image: linear-gradient(45deg, #cc6600 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    transition: background 300ms ease-in-out; 
+    font-family: var(--primary-font);
+}
+
+.addButton:hover {
+    background-position: 0;
+    color: #e6b800;
 }
