@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import firebase from 'firebase/compat';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
