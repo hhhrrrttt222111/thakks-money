@@ -11,12 +11,13 @@ import Header from './Header/Header';
 
 function Home() {
 
+
     const [loans, setLoans] = useState([])
 
     const { currentUser } = useContext(AuthContext)
 
     useEffect(() => {
-        db.collection('users').doc(currentUser.uid).collection('loans').onSnapshot(snapshot => (
+        db.collection('users').doc(currentUser.uid).collection('loans').orderBy('createdAt', 'desc').onSnapshot(snapshot => (
             setLoans(
                 snapshot.docs.map((doc) => ({
                     id: doc.id,
