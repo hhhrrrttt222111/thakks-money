@@ -13,7 +13,7 @@ import './AddLoan.css'
 function AddLoan() {
 
     const [name, setName] = useState('')
-    const [amount, setAmount] = useState('')
+    const [amount, setAmount] = useState(0)
     const [description, setDescription] = useState('')
     
     const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ function AddLoan() {
                 onClose={handleAddLoanClose}
                 PaperProps={{
                     style: {
-                      backgroundColor: '#e6b800',
+                      backgroundColor: '#ffe680',
                     },
                 }}
             >
@@ -62,17 +62,17 @@ function AddLoan() {
                     <div className='addLoan__body'>
                         <div className='addLoan__div'>
                             <label>Name</label>
-                            <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} className='addLoan__input'/>
+                            <input id="name" type="text" placeholder='lloyd Shibu' value={name} onChange={(e) => setName(e.target.value)} className='addLoan__input'/>
                         </div>
 
                         <div className='addLoan__div'>
                             <label>Amount</label>
-                            <input id="amount" type="text" value={amount} onChange={(e) => setAmount(e.target.value)} className='addLoan__input'/>
+                            <input id="amount" type="text" placeholder='350' value={amount} onChange={(e) => setAmount(Number(e.target.value.replace(/[^0-9]/g, "")))} className='addLoan__input'/>
                         </div>
 
                         <div className='addLoan__div'>
                             <label>Description</label>
-                            <textarea id="description" type="text" value={description} onChange={(e) => setDescription(e.target.value)} className='addLoan__input textarea'/>
+                            <textarea id="description" type="text" placeholder='Pizza at Dominoes....' value={description} onChange={(e) => setDescription(e.target.value)} className='addLoan__input textarea'/>
                         </div>
                         
                     </div>

@@ -95,11 +95,24 @@
     border-radius: 7px;
     outline: none;
     border: 3px solid #cc6600;
-    background-color: #e6b800;
+    background-color: #ffe680;
     resize: none;
     padding: 0 0.35rem;
     font-family: var(--secondary-font);
     font-weight: 600;
+}
+
+.addLoan__input::placeholder {
+  color: #4d4d4d;
+  opacity: 1; 
+}
+
+.addLoan__input:-ms-input-placeholder { 
+  color: #4d4d4d;
+}
+
+.addLoan__input::-ms-input-placeholder {
+  color: #4d4d4d;
 }
 
 .textarea {

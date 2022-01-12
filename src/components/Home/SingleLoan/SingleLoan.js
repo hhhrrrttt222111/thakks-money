@@ -30,9 +30,11 @@ function SingleLoan({ data, id, no }) {
     }
     const reduceMoney = () => {
         db.collection('users').doc(currentUser.uid).collection('loans').doc(id).update({
-            amount: firebase.firestore.FieldValue.increment(-(newAmount))
+            amount: firebase.firestore.FieldValue.increment(newAmount *- 1)
         })
     }
+
+    console.log(typeof((newAmount)))
 
     return (
         <div className='singleLoan' key={id}>
@@ -56,7 +58,7 @@ function SingleLoan({ data, id, no }) {
                             <div className="slider_btns">
                                 <div className="slider_btns_action">
                                     <IoIosRemove className="slider_subtractBtn" onClick={reduceMoney}/>
-                                        <input type='text' value={newAmount} onChange={(e) => setNewAmount(e.target.value.replace(/[^0-9]/g, ""))} />
+                                        <input type='text' value={newAmount} onChange={(e) => setNewAmount(Number(e.target.value.replace(/[^0-9]/g, "")))} />
                                     <IoIosAdd className="slider_addBtn" onClick={addMoney}/>
                                 </div>
                             </div>
