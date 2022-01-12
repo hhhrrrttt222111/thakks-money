@@ -121,9 +121,8 @@
 }
 
 .addButton {
-    padding: 0.48rem 0.9rem;
+    padding: 0.40rem 1rem;
     font-size: 1.05rem;
-    border-radius: 5px 22px 5px;
     font-weight: 600;
     background-color: transparent;
     cursor: pointer;
@@ -132,7 +131,7 @@
     appearance: none;
     background-color: transparent;
     border: 3px solid #cc6600;
-    border-radius: 0px 25px 0px;
+    border-radius: 22px;
     border-color: #cc6600;
     white-space: nowrap !important;
     color: #cc6600;

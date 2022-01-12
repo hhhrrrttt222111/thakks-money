@@ -16,6 +16,7 @@ function Home() {
 
     const { currentUser } = useContext(AuthContext)
 
+
     useEffect(() => {
         db.collection('users').doc(currentUser.uid).collection('loans').orderBy('createdAt', 'desc').onSnapshot(snapshot => (
             setLoans(
@@ -26,7 +27,10 @@ function Home() {
             )
         ))
 
+
     }, [currentUser.uid]);
+
+    const sum = loans.map(item => item.data.amount).reduce((prev, curr) => prev + curr, 0);
 
 
     return (
@@ -42,6 +46,9 @@ function Home() {
                             <SingleLoan key={loan.id} id={loan.id} no={no} data={loan.data} />
                         ))
                     }
+                </div>
+                <div className='home_total'>
+                    <h2>Total amount: <span className='bold'>{sum}</span>Rs</h2>
                 </div>
             </div>
         </div>

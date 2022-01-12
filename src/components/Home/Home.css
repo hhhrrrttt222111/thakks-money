@@ -9,6 +9,24 @@
     margin: 16px !important;
 }
 
+.home_total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.home_total h2 {
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 600;   
+    font-size: 1.85rem;
+}
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
