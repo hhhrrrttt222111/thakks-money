@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import firebase from 'firebase/compat';
 import { AuthContext } from '../../context/AuthContext';
 import { Button } from '@mui/material'; 
+import { HiUserCircle } from "react-icons/hi";
 
 import { Link } from 'react-router-dom';
 
@@ -28,8 +29,9 @@ function Profile() {
                 {/* <ArrowBackIcon className="profile-backarrow"/> */}
             </Link>
             <div className="logout" onClick={handleLogout}>
-                <h4>Logout</h4>
+                <HiUserCircle className='profile_icon'/>
             </div>
+
             <h1>My Profile</h1>
            
                 <div className="profileContainer">

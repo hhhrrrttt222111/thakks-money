@@ -28,6 +28,12 @@
     cursor: pointer;
 }
 
+.logout .profile_icon {
+    font-size: 3.15rem;
+    color: #e6b800;
+    cursor: pointer;
+}
+
 .logout > h4 {
     font-size: 1.5rem;
     color: #000;

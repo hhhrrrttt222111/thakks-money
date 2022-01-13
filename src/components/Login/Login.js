@@ -3,6 +3,8 @@ import firebase from 'firebase/compat';
 import { useNavigate } from 'react-router-dom';
 import Helmet from 'react-helmet'
 
+import logoImg from '../../assets/images/logo.png';
+
 import { AuthContext } from '../../context/AuthContext'
 import { auth, db } from '../../firebase/firebase';
 
@@ -48,6 +50,9 @@ function Login() {
             </Helmet>
             <div className="login-container">
                     <div className="login-leftcontainer">
+                        <div className='logo-img'>
+                            <img src={logoImg} alt="" />
+                        </div>
                         <p>Use ThakksMoney to keep track of your money</p>
                     </div>
                     <div className="login-rightcontainer">
