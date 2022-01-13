@@ -7,14 +7,18 @@
     margin-bottom: 1rem;
 }
 
-.header a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+.logo_img {
+    width: 15%;
+}
+
+.logo_img > img {
+    width: 100px;
 }
 
 .profile_icon {
-    font-size: 2.15rem;
+    font-size: 3.15rem;
     color: #e6b800;
     cursor: pointer;
 }
