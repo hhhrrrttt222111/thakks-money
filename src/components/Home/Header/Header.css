@@ -14,11 +14,30 @@
 }
 
 .logo_img > img {
-    width: 100px;
+    width: 75px;
+    cursor: pointer;
 }
 
 .profile_icon {
     font-size: 3.15rem;
     color: #e6b800;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .logo_img > img {
+        width: 55px;
+    }
+    
+    .profile_icon {
+        font-size: 2.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+
+    
 }

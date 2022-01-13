@@ -128,6 +128,29 @@
     .singleLoan {
         width: 100%;
     }
+
+    .sl__title {
+        justify-content: space-between;
+    }
+    .sl__no {
+        display: none;
+    }
+    
+    .sl__name {
+        width: 60%;
+        font-size: 1.05rem;
+    }
+    
+    .sl__amount {
+        width: 20%;
+        font-weight: 600;
+        font-family: var(--secondary-font);
+    }
+    
+    .sl__status {
+        width: 15%;
+    }
+    
     
 }
 

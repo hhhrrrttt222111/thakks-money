@@ -72,7 +72,6 @@
     align-items: flex-start;
     justify-content: center;
     gap: 1.35rem;
-
 }
 
 .addLoan__div {
@@ -145,4 +144,26 @@
 .addButton:hover {
     background-position: 0;
     color: #e6b800;
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .addLoan__body {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+ 
+  .addLoan__body {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+ 
+  .addLoan__body {
+    width: 300px;
+  }
 }

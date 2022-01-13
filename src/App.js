@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { Home, Profile, Login } from "./components";
 import PrivateRoute from "./utils/PrivateRoute"
@@ -13,7 +13,15 @@ function App() {
         <ScrollToTop />
         <Routes>
             <Route path="login" element={<Login />} />
-            <Route path="profile" element={<Profile />} />
+            <Route 
+              path="profile" 
+              element={
+                <PrivateRoute>
+                  <Profile />
+                </PrivateRoute>
+              }
+            />
+
             <Route
               path="/"
               element={
@@ -22,6 +30,7 @@ function App() {
                 </PrivateRoute>
               }
             />
+            <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </BrowserRouter>
     </div>

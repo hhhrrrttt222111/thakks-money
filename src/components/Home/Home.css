@@ -45,7 +45,19 @@
 }
 
 @media screen and (max-width: 800px) {
+    .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+        margin: 8px !important;
+    }
 
+    .css-ypiqx9-MuiDialogContent-root {
+        padding: 10px 16px !important;
+    }
+    .css-bdhsul-MuiTypography-root-MuiDialogTitle-root {
+        font-family: "Roboto",sans-serif !important;
+        font-weight: 500 !important;
+        font-size: 1.15rem !important;
+        padding: 10px 16px !important;
+    }
     
 }
 

@@ -28,15 +28,10 @@
     cursor: pointer;
 }
 
-.logout .profile_icon {
-    font-size: 3.15rem;
-    color: #e6b800;
+.profile_img {
+    border-radius: 50%;
     cursor: pointer;
-}
-
-.logout > h4 {
-    font-size: 1.5rem;
-    color: #000;
+    width: 45px;
 }
 
 .logout-icon {
@@ -46,10 +41,8 @@
     font-family: 'Nunito', sans-serif;
 }
 
-.profile > h1 {
-    margin-bottom: 2rem;
-    font-family: 'Nunito', sans-serif;
-
+.MuiMenu-paper {
+    background-color: #ffe066 !important;
 }
 
 .profileContainer {

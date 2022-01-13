@@ -57,6 +57,7 @@ function Login() {
                     </div>
                     <div className="login-rightcontainer">
                         <div className="logo-container">
+                            <img src={logoImg} alt=""/>
                         </div>
                         <div className="login-right-content">
                             <p>Welcome to</p>

@@ -34,8 +34,6 @@ function SingleLoan({ data, id, no }) {
         })
     }
 
-    console.log(typeof((newAmount)))
-
     return (
         <div className='singleLoan' key={id}>
             <Accordion  

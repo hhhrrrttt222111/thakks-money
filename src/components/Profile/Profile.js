@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
+import React, { useContext, useState } from 'react';
 import firebase from 'firebase/compat';
 import { AuthContext } from '../../context/AuthContext';
-import { Button } from '@mui/material'; 
-import { HiUserCircle } from "react-icons/hi";
+import { Button, MenuItem, Menu } from '@mui/material'; 
+import { Link, useNavigate } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
+import { IoChevronBack } from "react-icons/io5";
 
 
 
@@ -13,6 +13,7 @@ import './Profile.css'
 function Profile() {
 
     const { currentUser, handleLogout } = useContext(AuthContext)
+    let navigate = useNavigate();
 
     const deleteAccount = () => {
         const user = firebase.auth().currentUser;
@@ -23,16 +24,36 @@ function Profile() {
         });
     }
 
+    const logout = () => {
+        handleLogout()
+        navigate("/login")
+    }
+
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
     return (
         <div className='profile'>
             <Link to="/">
-                {/* <ArrowBackIcon className="profile-backarrow"/> */}
+                <IoChevronBack className="profile-backarrow"/>
             </Link>
-            <div className="logout" onClick={handleLogout}>
-                <HiUserCircle className='profile_icon'/>
+            <div className="logout">
+                <img onClick={handleClick} src={currentUser.photoURL} alt="" className='profile_img'/>
             </div>
-
-            <h1>My Profile</h1>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+            >
+                <MenuItem onClick={logout}>Logout</MenuItem>
+            </Menu>
            
                 <div className="profileContainer">
                     <div className="profile_header">

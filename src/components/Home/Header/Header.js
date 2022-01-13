@@ -10,7 +10,7 @@ function Header() {
     return (
         <div className='header'>
             <div className='logo_img'>
-               <img src={logoImg} alt="" />
+               <img onClick={() => {window.location.reload()}} src={logoImg} alt="" />
             </div>
             <Link to='profile'>
                 <HiUserCircle className='profile_icon'/>

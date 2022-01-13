@@ -69,7 +69,7 @@
 }
 
 .logo-container > img {
-    width: 50px;
+    width: 60px;
 }
 
 .login-right-content > h1 {
@@ -84,14 +84,15 @@
 
 .login-right-content > p {
     font-size: 1.5rem;
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--secondary-font);
 }
 
 .login-right-content > h4 {
     font-size: 1.4rem;
     text-align: center;
     padding: 1.5rem;
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--secondary-font);
+    color: #333333;
 }
 
 .login-rightcontainer > img {
@@ -112,7 +113,7 @@
     color: #2c2c2c;
     font-size: 16px;
     font-weight: 800;
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--secondary-font);
     background-color: #fff;
     border: 2px solid #2c2c2c;
     background-repeat: no-repeat;
@@ -186,7 +187,7 @@
     }
     .login-rightcontainer > img {
         display: block;
-        width: 400px;
+        width: 100px;
     }
 
     .login-right-content {
@@ -206,13 +207,16 @@
         right: 28px;
     }
     .logo-container > img {
-        width: 40px;
+        width: 60px;
     }
 }
 
 @media screen and (max-width: 400px) {
     .login-rightcontainer > img {
         width: 350px;
+    }
+    .logo-container > img {
+        width: 40px;
     }
 }
   
