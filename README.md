@@ -1,1 +1,3 @@
-# ThakksMoney
+# ThakksMoney 💰
+
+### https://thakksmoney.netlify.app/ 💲
